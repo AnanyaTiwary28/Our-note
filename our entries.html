@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Entries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>Our Entries</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add new entry.html">Add new entry</a>
+        <a href="mood Track.html"> Mood Track</a>
+    </nav>
+   </header>
+
+   <main>
+       <section>
+            <h2>All entries</h2>
+            <div id="entries-container">
+                <!-- Journal entries will be display here by js -->
+            </div>
+
+            <!-- Edit Entry Modal -->
+               <div id="edit-entry-modal" style="display:none;">
+                      <form id="edit-entry-form">
+                      <label for="edit-entry-title">Title:</label>
+                      <input type="text" id="edit-entry-title" required>
+        
+                       <label for="edit-entry-content">Content:</label>
+                       <textarea id="edit-entry-content" required></textarea>
+        
+                       <button type="submit">Update Entry</button>
+                       <button type="button" onclick="closeEditForm()">Cancel</button>
+                      </form>
+                </div>
+
+       </section>
+   </main>
+
+     <!-- Link to Javascript file -->
+     <script src="script.js"></script>
+</body>
+</html>
+
+
+

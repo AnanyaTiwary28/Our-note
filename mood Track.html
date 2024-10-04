@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Track</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Track Mood</h1>
+        <nav>
+            <a href="index.html"> Home</a>
+            <a href="add new entry.html">Add new entry</a>
+            <a href="our entries.html"> Our Entries</a>
+        </nav>
+       </header>
+
+       <main>
+        <section>
+            <h2>Select a date and add your moof for that day!</h2>
+            <!-- calendar navigation and display  -->
+             <div id="calendar-container">
+                <div id= "calendar-header">
+                    <button id="prev-month">◀</button>
+                    <span id="current-month-year">September 2024</span>
+                    <button id="next-month">▶</button>
+                    
+                </div>
+                    <!-- calendar for dates -->
+                    <div id="calendar" class="calendar">
+                         <!-- Calendar will be dynamically display by js -->
+            
+                    <div>
+                </div>
+        </section>
+       </main>
+
+       <div id="emoji-picker" class="hidden">
+        <h3>Select Your Mood</h3>
+        <div id="emoji-options">
+            <!-- Mood emojis -->
+             <span>😹</span> <span>😿</span><span>😾</span> <span>😻</span> <span>😼</span>
+             <span>🐰</span> <span>👻</span> <span>🤑</span> <span>😭</span> <span>🫠</span> <span>🤗</span> <span>😎</span> 
+             <span>🤕</span> <span>😶‍🌫️</span> <span>🔥</span>  <span>🫰🏻</span> <span>🫶🏻</span> <span>🖤</span> <span>🤍</span> <span>💝</span> 
+             <span>💖</span> <span>💔</span> <span>❤️</span>
+        </div>
+        <div class="dates" id="dates"></div>
+       </div>
+                <!-- Link to Javascript file -->
+        <script src="script.js"></script>  
+</body>
+</html>

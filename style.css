@@ -1,0 +1,289 @@
+/* Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    background: url(image.jpeg) no-repeat;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; /* Add a default font */
+}
+
+header {
+    background: transparent;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Base font size */
+}
+
+nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #ed5ed8;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: blueviolet;
+}
+
+main {
+    margin: 10px;
+}
+
+section {
+    background: #f0edf2;
+    background: transparent;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px;
+    font-size: medium;
+}
+
+/* Forms */
+form label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 15px;
+    background-color: #b519e9;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #e919b2;
+}
+
+/* Entry Box */
+.entry-box {
+    background: #76447df2;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0; /* Spacing between each entry box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.entry-box h3 {
+    margin-top: 0;
+    color: #0ac7f6;
+}
+
+.entry-box p {
+    margin: 10px 0 0;
+    color: #fbfbfb;
+}
+
+#entries-container {
+    margin-top: 20px;
+}
+
+/* Edit Button Styles */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Spacing between buttons */
+    font-size: 16px; /* Adjust font size for better readability */
+    background-color: #3b393c;
+    color: white;
+}
+
+/* Calendar styles */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Responsive grid */
+    gap: 5px;
+    max-width: 600px; /* Maximum width for larger screens */
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #b46bf0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-container {
+    display: flex;
+    align-content: center;
+}
+
+.calendar:hover {
+    background-color: #9a26e2;
+    cursor: pointer;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+.monthYear {
+    text-align: center;
+    font-weight: 600;
+}
+
+#current-month-year {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.calendar-header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.empty {
+    display: none;
+}
+
+#calendar div {
+    height: 60px; /* Height for calendar days */
+    text-align: center;
+    cursor: pointer;
+}
+
+#calendar .day-number {
+    font-weight: 900;
+}
+
+#emoji-picker {
+    display: block;
+    z-index: 400;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 105%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: #a356a4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#emoji-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+span {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#emoji-options span:hover {
+    transform: scale(1.5);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Dates styles */
+.dates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+}
+
+.date:hover,
+.date.active {
+    background: rgb(187, 94, 196);
+    color: white;
+}
+
+.date.inactive {
+    color: #fffcfc;
+}
+
+.date.inactive:hover {
+    color: white;
+}
+
+/* Media Query for Responsiveness */
+@media (min-width: 100px) and (max-width: 1440px) {
+    header h1 {
+        font-size: 1.5em; /* Responsive font size */
+    }
+
+    nav a {
+        padding: 6px 10px; /* Adjusted padding for smaller screens */
+    }
+
+    section {
+        font-size: 0.9em; /* Slightly smaller font for smaller screens */
+    }
+
+    /* Form button */
+    form button {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    /* Adjust calendar grid for smaller screens */
+    #calendar {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* More items fit */
+    }
+
+    #calendar div {
+        height: 50px; /* Smaller height for calendar days */
+    }
+
+    .monthYear {
+        width: auto; /* Allow monthYear to adapt */
+    }
+
+    /* Entry Box for Smaller Screens */
+    .entry-box {
+        padding: 10px; /* Less padding for smaller screens */
+    }
+}
